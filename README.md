@@ -95,7 +95,7 @@ The image below is an example of a table that is not 1NF, this is because the at
 
 The second normal form [2NF] </br>
 A table is in 2NF if every attribute that is not part of the key depends on the whole primary key.</br>
-For example the table in the image below is not in 2NF because PNAME and PLOCATION only depend on PNUMBER and not on SSN and PNUMBER (which togheter is the whole key)</br> 
+For example the table in the image below is not in 2NF because PNAME and PLOCATION only depend on PNUMBER and not on SSN and PNUMBER (which togheter is the whole key).</br> 
 
 ![not_2NF](https://user-images.githubusercontent.com/24454699/55899624-d2c6de00-5bb4-11e9-9a04-b41c10409bd8.png)
 </br>
@@ -103,8 +103,16 @@ For example the table in the image below is not in 2NF because PNAME and PLOCATI
 AN USEFULL TRICK TO CHECK IF A TABLE IS IN 2NF:</br>
 If the primary key of a table is made of only one attribute the table is always 2NF. This is because there is no functional dependency where the left side is a part of the primary key.
 
+The third normal form </br>
+In this form a transitive dependency needs to be defined. A functional dependency is transive if there is a set of attributes which is neither a candidate key nor a subset of any key. </br>
+In the image below you see an example of a transive dependency. </br>
+
+![transive_dependency](https://user-images.githubusercontent.com/24454699/55901759-88942b80-5bb9-11e9-9594-6f75ec82d20d.png)
+
+As you can see the functional dependency SSN -> {DNAME,DMGRSSN} is transitive because SSN -> DNUMBER and DNUMBER -> {DNAME,DMGRSSN} are valid functional dependencies and is not a candidate key nor a subset of any key.
+
 Functional dependencies </br>
-Are dependencies that are defined by the designer. They cant be infered by reading data from the database table, instead they should be read in the documentation of the database. Only if there is no documentation provided with the database, you can try to infer functional dependencies from the data.
+Are dependencies that are defined by the designer. They can't be infered by reading data from the database table, instead they should be read in the documentation of the database. Only if there is no documentation provided with the database, you can try to infer functional dependencies from the data.
 
 {examples will be implented later}
 
