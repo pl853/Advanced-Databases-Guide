@@ -19,7 +19,12 @@ Are the highest level of models when database modelling, it models the conceptua
    - Ex 1. An id for a starship. In this example starships can't have the same key.
    - Ex 2. A firstname and a lastname for a person combined. In this case a people can't have the same combination of firstname and lastname.
  - Weak entities </br>
-   Are attributes that don't have to be or are not unique. Ex. the speed of a starship. Multiple starships can have te same speed.
+   Are attributes that don't have to be or are not unique. Ex. the speed of a starship. Multiple starships can have te same speed.</br>
+   </br>
+In the image below you can see an example of a datatable. In this datatable Ships is the enity. The attributes are: id, name ,shields, pilot, armour, integrity. The set of values at the bottom of the image is an example of a tuple of data (term tuple will be explained later).
+
+![ex_entity_attr_tuple](https://user-images.githubusercontent.com/24454699/55898343-e6bd1080-5bb1-11e9-8c43-94c8c137ab58.png)
+
 
 Relational model </br>
 A model halfway between a conceptual model and the physical model, it contains an abstraction of physical elements.
@@ -74,7 +79,10 @@ They are properties that a relation must satisfy. You can devide the term normal
   A refinement of the normal forms that also takes the candidate keys into account.
 
 The first normal form [1NF] </br> will be automaticly given by the relational model unless the ERD is not translated correctly in the relational model. All your relations should be 1NF.
-You can see if a table is in 1NF by checking wether a row has multiple values for one attribute. If this is the case the table is not in 1NF. 
+You can see if a table is in 1NF by checking wether a row has multiple values for one attribute. If this is the case the table is not in 1NF. </br>
+The image below is an example of a table that is not 1NF, this is because the attribute PNUMBER is not unique in the datatable.
+
+![No_1NF](https://user-images.githubusercontent.com/24454699/55897466-1408bf00-5bb0-11e9-811d-d90f80e118f0.png)
 
 The second normal form [2NF] </br>
 
