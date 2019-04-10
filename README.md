@@ -22,7 +22,7 @@ Are the highest level of models when database modelling, it models the conceptua
    Are attributes that don't have to be or are not unique. Ex. the speed of a starship. Multiple starships can have te same speed.
 
 Relational model </br>
-A model halfway between a conceptual model and the physical model, it contains an abstraction of physical elements
+A model halfway between a conceptual model and the physical model, it contains an abstraction of physical elements.
  - Relation </br>
    In a relational model a relation is a collection of tuples (an element of a tuple is in this case an attribute of an entity) Ex. (id:3,firstname:"pieter",lastname:"lems").
  - Keys </br>
@@ -31,7 +31,7 @@ A model halfway between a conceptual model and the physical model, it contains a
    - a Candidate key which is the smallest set of attributes that form a superkey ( a superkey is a set of keys that uniquely define an entity). For example, if a table has the primarykeys: id firstname lastname, the candidate key can be either (id,firstname) or (id,lastname) or (firstname,lastname).
 
 SQL </br>
-SQL is a language than declares the WHAT and not the HOW.
+Is a language that declares the WHAT and not the HOW.
 The language consist of four categories.
 
 The Data Definition Language (DDL) is used to create relations (tables).
@@ -48,15 +48,23 @@ Normalization </br>
 The main reason normalization is used is because it improves the way the database is designed. It is the process of converting the tables of a database into other tables in some normal form( will be explained later). Normalization uses decomposition to eliminate anomalies and redundancy. This is neccesary since it wil:
 - minimze te storage space used by relations
   When you join two separate tables you use less storage space then putting everything in the same table.
+![Redundancy](https://user-images.githubusercontent.com/24454699/55897263-b7a59f80-5baf-11e9-8113-d4cc92f25f9f.png)
+
+
 - eliminate anomalies in a database (redundancy | overbodigheden)
   When updating a database which has anomalies there will be null values needed. 
   When deleting a database which has anomalies there will be more info removed than needed.
   When modifying a database which has anomalies you have to modify every tuple by hand because it will not reflect the modification in al the tuples.
+
+![No_anomalies](https://user-images.githubusercontent.com/24454699/55897471-166b1900-5bb0-11e9-91db-366cebb43855.png)
+
 - eliminate spurious tuples
-  spurious tuples are created when joining 2 tables that are not designed correctly. Normalization makes sure that the decomposition doesn't create spurious tuples
+  spurious tuples are created when joining 2 tables that are not designed correctly. Normalization makes sure that the decomposition doesn't create spurious tuples. </br>
+  In the following image you can see an example of a combined datatable where spurious tuples are created. Everything under the dotted lines are spurious tuples.
+  ![Spurious_tuples](https://user-images.githubusercontent.com/24454699/55897454-0eab7480-5bb0-11e9-8168-784bc76ae708.png)
 
 Normal forms </br>
-They are properties that a relation must satisfy. You can devide the term normal forms in 2 differen kinds:
+They are properties that a relation must satisfy. You can devide the term normal forms in 2 different kinds of forms:
 - Historical definitions </br>
   The original definitions defined by the code, taking into account only the primary key.
 - Refined definitions </br>
