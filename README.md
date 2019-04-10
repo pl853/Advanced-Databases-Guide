@@ -46,8 +46,10 @@ Transaction Control language (TCL) is used to create transactions and control th
 
 Normalization </br>
 The main reason normalization is used is because it improves the way the database is designed. It is the process of converting the tables of a database into other tables in some normal form( will be explained later). Normalization uses decomposition to eliminate anomalies and redundancy. This is neccesary since it wil:
-- minimze te storage space used by relations
-  When you join two separate tables you use less storage space then putting everything in the same table.
+- minimze te storage space used by relations </br>
+  When you join two separate tables you use less storage space then putting everything in the same table. </br>
+  In the following image you can see an example of a datatable where some data is redundant.
+
 ![Redundancy](https://user-images.githubusercontent.com/24454699/55897263-b7a59f80-5baf-11e9-8113-d4cc92f25f9f.png)
 
 
