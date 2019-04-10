@@ -119,3 +119,19 @@ As you can see the functional dependency SSN -> {DNAME,DMGRSSN} is transitive be
 
 
 Normalization on candidate keys </br>
+
+Normalization Algorithms </br>
+Below we will learn some algorithms for normalizing tables. The algorithms are:
+- From unnormalized to 1NF </br>
+  
+  First we have to find an attribute which is non-atomic (non-atomic means that the attribute contains multiple values)</br>
+  The image below contains an non-atomic attribute which is called PROJS.</br>
+  
+  ![table_withnonatomic](https://user-images.githubusercontent.com/24454699/55904905-6d78ea00-5bc0-11e9-93cd-5e5f639fff1e.png)
+  </br>
+  
+  
+  The attribute PROJS is made up by the sub-attributes PNUMBER and HOURS The other attributes , SSN and ENAME, are atomic atributes.
+- From 1NF to 2NF
+- from 2NF to 3NF
+
