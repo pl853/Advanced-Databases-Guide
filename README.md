@@ -21,16 +21,17 @@ Are the highest level of models when database modelling, it models the conceptua
     Ex 1. An id for a starship. In this example starships can't have the same key. </br>
     Ex 2. A firstname and a lastname for a person combined. In this case a people can't have the same combination of firstname and lastname. </br>
     In the image below there is an example of the 2 types of keys. In this case shipid is a foreign key to ships.
- 
+ </br>
 ![ex+keys](https://user-images.githubusercontent.com/24454699/55898683-a8742100-5bb2-11e9-812b-1979858118cc.png)
-
+</br>
 
  - Weak entities </br>
    Are attributes that don't have to be or are not unique. Ex. the speed of a starship. Multiple starships can have te same speed.</br>
    </br>
-In the image below you can see an example of a datatable. In this datatable Ships is the enity. The attributes are: id, name ,shields, pilot, armour, integrity. The set of values at the bottom of the image is an example of a tuple of data (term tuple will be explained later).
+In the image below you can see an example of a datatable. In this datatable Ships is the enity. The attributes are: id, name ,shields, pilot, armour, integrity. The set of values at the bottom of the image is an example of a tuple of data (term tuple will be explained later).</br>
  
 ![ex_entity_attr_tuple](https://user-images.githubusercontent.com/24454699/55898343-e6bd1080-5bb1-11e9-8c43-94c8c137ab58.png)
+</br>
  
 
 Relational model </br>
