@@ -123,25 +123,26 @@ Normalization on candidate keys </br>
 Normalization Algorithms </br>
 Below we will learn some algorithms for normalizing tables. The algorithms are:
 - From unnormalized to 1NF </br>
-  To understand the unnormalized to 1NF algorith you first have to know the definitions of the following terms
-  - Non-atomic attributes
+  To understand the unnormalized to 1NF algorith you first have to know the definitions of the following terms:
+  - Non-atomic attributes </br>
     A non-atomic attibute , also called a composite attribute, is an attribute that consist out of multiple attributes.
     In the image below PROJS is a non-atomic attribute that consists out of the attributes PNUMBER and HOURS. </br>
     ![non-atomic_att](https://user-images.githubusercontent.com/24454699/55906562-12e18d00-5bc4-11e9-8c8a-dfbb2a3b5c27.png)
     </br>
-  - Sub-attributes
-    A sub-attibute is an attribute that is derives from an non-atomic attribute. 
-
+  - Sub-attributes </br>
+    A sub-attibute is an attribute that is derives from an non-atomic attribute. In the image above PNUMBER and HOURS are both sub-attributes of PROJS.
   
-  First we have to find an attribute which is non-atomic also called a composite attribute (non-atomic means that the attribute contains multiple values)</br>
+  Now that you know the definitions of the terms mentioned above we can create the algorithm. 
+  
+  First we have to find an non-atomic attribute.
   The image below contains an non-atomic attribute which is called PROJS.</br>
   
   ![table_withnonatomic](https://user-images.githubusercontent.com/24454699/55904905-6d78ea00-5bc0-11e9-93cd-5e5f639fff1e.png)
   </br>
   
-  
-  The attribute PROJS is made up by the sub-attributes PNUMBER and HOURS The other attributes , SSN and ENAME, are atomic atributes.</br>
-  After you located the non-atomic attribute you create a new table which in this case is called EMP_PROJ1
+  The attribute PROJS is made up by the sub-attributes PNUMBER and HOURS. The other attributes , SSN and ENAME, are atomic atributes.</br>
+  After you located the non-atomic attribute you create a new table , which in this case is called EMP_PROJ1, containing the primary key (SSN in this case) and the atomic attribute ENAME. </br>
+  Then you create a table called EMP_PROJ2 which contains the primarykey (SSN) and the two sub-attributes of the non-atomic attribute(PROJS) which are PNUMBER and HOURS. In this table the primary key is (SSN,PNUMBER) because the values of PNUMBER 
 - From 1NF to 2NF
   
 - from 2NF to 3NF
