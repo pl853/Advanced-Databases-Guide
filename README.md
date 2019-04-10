@@ -21,10 +21,14 @@ Are the highest level of models when database modelling, it models the conceptua
  - Weak entities </br>
    Are attributes that don't have to be or are not unique. Ex. the speed of a starship. Multiple starships can have te same speed.
 
-Relational model
+Relational model </br>
 A model halfway between a conceptual model and the physical model, it contains an abstraction of physical elements
- - relation
- - Keys
+ - Relation </br>
+   In a relational model a relation is a collection of tuples (an element of a tuple is in this case an attribute of an entity) Ex. (id:3,firstname:"pieter",lastname:"lems").
+ - Keys </br>
+   There are 2 types of keys:
+   - a Primary key which is a set of attributes of which the values are unique in eacht tuple. Ex. (id)
+   - a Candidate key which is the smallest set of attributes that form a superkey ( a superkey is a set of keys that uniquely define an entity). For example, if a table has the primarykeys: id firstname lastname, the candidate key can be either (id,firstname) or (id,lastname) or (firstname,lastname).
 
 SQL </br>
 SQL is a language than declares the WHAT and not the HOW.
