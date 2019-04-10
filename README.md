@@ -147,7 +147,13 @@ Below we will learn some algorithms for normalizing tables. The algorithms are:
   But what if there are multiple non-atomic attributes? </br>
   If thats the case you should just repeat the steps for all non-atomic attributes.
 
-- From 1NF to 2NF
+- From 1NF to 2NF</br>
+  To understand this algorithm you first have to understand what the reason is that the 2NF is broken. To recap this go to the Normal forms section. </br>
+  It's also smart to recap the definition of functional dependency.
+
+  First we have to  an attribut that is:
+  - Not a key or part of the key
+  - Is functionally dependent on a key or part of the key.
   
 - from 2NF to 3NF
 
