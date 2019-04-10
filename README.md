@@ -76,7 +76,7 @@ The main reason normalization is used is because it improves the way the databas
 ![No_anomalies](https://user-images.githubusercontent.com/24454699/55897471-166b1900-5bb0-11e9-91db-366cebb43855.png)
 
 - eliminate spurious tuples
-  spurious tuples are created when joining 2 tables that are not designed correctly. Normalization makes sure that the decomposition doesn't create spurious tuples. </br>
+  spurious tuples are created when joining 2 tables that are not designed correctly, this will create more tuples than were in the original tables. Normalization makes sure that the decomposition doesn't create spurious tuples. </br>
   In the following image you can see an example of a combined datatable where spurious tuples are created. Everything under the dotted lines are spurious tuples.
   ![Spurious_tuples](https://user-images.githubusercontent.com/24454699/55897454-0eab7480-5bb0-11e9-8168-784bc76ae708.png)
 
@@ -142,7 +142,11 @@ Below we will learn some algorithms for normalizing tables. The algorithms are:
   
   The attribute PROJS is made up by the sub-attributes PNUMBER and HOURS. The other attributes , SSN and ENAME, are atomic atributes.</br>
   After you located the non-atomic attribute you create a new table , which in this case is called EMP_PROJ1, containing the primary key (SSN in this case) and the atomic attribute ENAME. </br>
-  Then you create a table called EMP_PROJ2 which contains the primarykey (SSN) and the two sub-attributes of the non-atomic attribute(PROJS) which are PNUMBER and HOURS. In this table the primary key is (SSN,PNUMBER) because the values of PNUMBER 
+  Then you create a table called EMP_PROJ2 which contains the primarykey (SSN) and the two sub-attributes of the non-atomic attribute(PROJS) which are PNUMBER and HOURS. In this table the primary key is (SSN,PNUMBER) because the values of PNUMBER are unique which is a neccesity for a primary key. SSN is a foreign key to EMP_PROJ1. </br>
+  
+  But what if there are multiple non-atomic attributes? </br>
+  If thats the case you should just repeat the steps for all non-atomic attributes.
+
 - From 1NF to 2NF
   
 - from 2NF to 3NF
