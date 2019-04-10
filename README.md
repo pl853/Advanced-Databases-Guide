@@ -22,7 +22,8 @@ Are the highest level of models when database modelling, it models the conceptua
     Ex 2. A firstname and a lastname for a person combined. In this case a people can't have the same combination of firstname and lastname. </br>
     In the image below there is an example of the 2 types of keys. In this case shipid is a foreign key to ships.
  
-    ![ex+keys](https://user-images.githubusercontent.com/24454699/55898683-a8742100-5bb2-11e9-812b-1979858118cc.png)
+![ex+keys](https://user-images.githubusercontent.com/24454699/55898683-a8742100-5bb2-11e9-812b-1979858118cc.png)
+
 
  - Weak entities </br>
    Are attributes that don't have to be or are not unique. Ex. the speed of a starship. Multiple starships can have te same speed.</br>
