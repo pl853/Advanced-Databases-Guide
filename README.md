@@ -153,7 +153,7 @@ Below we will learn some algorithms for normalizing tables. The algorithms are:
 
   First we have to  an attribute that is:
   - Not a key or part of the key
-  - Is functionally dependent on a key or part of the key.
+  - Is functionally dependent on only a part of the key. NOT THE WHOLE KEY!
 
   After you found an attribute which satisfys the characteristics mentionend above you remove the attribute from the table.</br> 
 
@@ -161,6 +161,7 @@ Below we will learn some algorithms for normalizing tables. The algorithms are:
   ![1NF2NF](https://user-images.githubusercontent.com/24454699/55910542-2b56a500-5bce-11e9-8704-f66a4ca18ada.png)
   </br>
     PLEASE UNDERSTAND THE FOLLOWING:
+  - That 2NF is broken by an attribute that is not part of the key and is only functionally dependent on a part of the key!
   - The reason for FD2 breaking the 2NF is because ENAME only depends on SSN and not on PNUMBER.
   - The reason for FD3 breaking the 2NF is because PNAME and PLOCATION only depend on PNUMBER.
   - The reason for FD1 NOT breaking the 2NF is because HOURS depends on both of the key attributes (SSN PNUMBER)
