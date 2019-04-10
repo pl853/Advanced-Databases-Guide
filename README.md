@@ -15,16 +15,22 @@ Are the highest level of models when database modelling, it models the conceptua
     - 1-N Ex. one pilot drives multiple spaceships
     - N-M EX. multiple pilots can drive multiple spaceships
  - Keys</br>
-   Are used to uniquely identify an entity, it can be a single or a set of attributes that define an entity. 
-   - Ex 1. An id for a starship. In this example starships can't have the same key.
-   - Ex 2. A firstname and a lastname for a person combined. In this case a people can't have the same combination of firstname and lastname.
+   Are used to uniquely identify an entity, it can be a single or a set of attributes that define an entity. There are 2 types of keys:
+   - Primary keys are the keys chosen for a relation amongs candidate keys (candidate keys will be explained later).
+   - Foreign keys are a set of attributes in one relation (table) which is a primary key in another relation (table) </br>
+    Ex 1. An id for a starship. In this example starships can't have the same key. </br>
+    Ex 2. A firstname and a lastname for a person combined. In this case a people can't have the same combination of firstname and lastname. </br>
+    In the image below there is an example of the 2 types of keys. In this case shipid is a foreign key to ships.
+    </br>
+    ![ex+keys](https://user-images.githubusercontent.com/24454699/55898683-a8742100-5bb2-11e9-812b-1979858118cc.png)
+    </br>
  - Weak entities </br>
    Are attributes that don't have to be or are not unique. Ex. the speed of a starship. Multiple starships can have te same speed.</br>
    </br>
 In the image below you can see an example of a datatable. In this datatable Ships is the enity. The attributes are: id, name ,shields, pilot, armour, integrity. The set of values at the bottom of the image is an example of a tuple of data (term tuple will be explained later).
-
+ </br>
 ![ex_entity_attr_tuple](https://user-images.githubusercontent.com/24454699/55898343-e6bd1080-5bb1-11e9-8c43-94c8c137ab58.png)
-
+ </br>
 
 Relational model </br>
 A model halfway between a conceptual model and the physical model, it contains an abstraction of physical elements.
@@ -33,7 +39,7 @@ A model halfway between a conceptual model and the physical model, it contains a
  - Keys </br>
    There are 2 types of keys:
    - a Primary key which is a set of attributes of which the values are unique in eacht tuple. Ex. (id)
-   - a Candidate key which is the smallest set of attributes that form a superkey ( a superkey is a set of keys that uniquely define an entity). For example, if a table has the primarykeys: id firstname lastname, the candidate key can be either (id,firstname) or (id,lastname) or (firstname,lastname).
+   - a Candidate key which is the smallest set of attributes that form a superkey ( a superkey is a set of keys that uniquely define an entity). For example, if a table has the primarykeys: id firstname lastname, the candidate key can be either (id,firstname) or (id,lastname).
 
 SQL </br>
 Is a language that declares the WHAT and not the HOW.
