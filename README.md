@@ -1,20 +1,25 @@
 # Advanced-Databases
 
-#### E-R Models
+E-R Models
 Are the highest level of models when database modelling, it models the conceptual aspect of the database.
- - entity </br>
+ - Entities </br>
    Anything that can exist on its own in the database. For example, take a database from a space shooter game. Starships, astroids and weapons could be entities in this database.
- - attributes</br>
+ - Attributes</br>
    Are characteristic of an entity. For example, take a starship as an entity. Atributes of this entity coulde be: 
    - The velocity of the ship.
    - The strenght of the ship.
    - The damage of the ship.
- - relations:
-    - 1-1
-    - 1-N
-    - N-M
- - Keys
- - Weak entities
+ - Relations</br>
+   Describe the relations between entities. The amount of participants, also called cardinalitie, can differ per entity. The possible cardinalities are:
+    - 1-1 Ex. one pilot drives one spaceship
+    - 1-N Ex. one pilot drives multiple spaceships
+    - N-M EX. multiple pilots can drive multiple spaceships
+ - Keys</br>
+   Are used to uniquely identify an entity, it can be a single or a set of attributes that define an entity. 
+   - Ex 1. An id for a starship. In this example starships can't have the same key.
+   - Ex 2. A firstname and a lastname for a person combined. In this case a people can't have the same combination of firstname and lastname.
+ - Weak entities </br>
+   Are attributes that don't have to be or are not unique. Ex. the speed of a starship. Multiple starships can have te same speed.
 
 Relational model
 A model halfway between a conceptual model and the physical model, it contains an abstraction of physical elements
