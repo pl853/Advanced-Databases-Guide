@@ -1,6 +1,6 @@
 # Advanced-Databases
 
-#### E-R Models #### </br>
+#### E-R Models
 Are the highest level of models when database modelling, it models the conceptual aspect of the database.
  - entity </br>
    Anything that can exist on its own in the database. For example, take a database from a space shooter game. Starships, astroids and weapons could be entities in this database.
