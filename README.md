@@ -47,6 +47,8 @@ They are properties that a relation must satisfy. You can devide the term normal
   The original definitions defined by the code, taking into account only the primary key.
 - Refined definitions
   A refinement of the normal forms that also takes the candidate keys into account.
+The first normal form will be automaticly given by the relational model unless the ERD is not translated correctly in the relational model. All your relations should be 1NF.
+You can see if a table is in 1NF by checking wether a row has multiple values for one attribute. If this is the case the table is not in 1NF. 
 
 {examples will be implented later}
 
