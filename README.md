@@ -80,6 +80,9 @@ The main reason normalization is used is because it improves the way the databas
   In the following image you can see an example of a combined datatable where spurious tuples are created. Everything under the dotted lines are spurious tuples.
   ![Spurious_tuples](https://user-images.githubusercontent.com/24454699/55897454-0eab7480-5bb0-11e9-8168-784bc76ae708.png)
 
+Functional dependencies </br>
+Are dependencies that are defined by the designer. They can't be infered by reading data from the database table, instead they should be read in the documentation of the database. Only if there is no documentation provided with the database, you can try to infer functional dependencies from the data.
+
 Normal forms </br>
 They are properties that a relation must satisfy. You can devide the term normal forms in 2 different kinds of forms:
 - Historical definitions </br>
@@ -111,8 +114,6 @@ In the image below you see an example of a transive dependency. </br>
 
 As you can see the functional dependency SSN -> {DNAME,DMGRSSN} is transitive because SSN -> DNUMBER and DNUMBER -> {DNAME,DMGRSSN} are valid functional dependencies and is not a candidate key nor a subset of any key.
 
-Functional dependencies </br>
-Are dependencies that are defined by the designer. They can't be infered by reading data from the database table, instead they should be read in the documentation of the database. Only if there is no documentation provided with the database, you can try to infer functional dependencies from the data.
 
 {examples will be implented later}
 
