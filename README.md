@@ -43,10 +43,16 @@ The main reason normalization is used is because it improves the way the databas
 
 Normal forms
 They are properties that a relation must satisfy. You can devide the term normal forms in 2 differen kinds:
-- Historical definitions
+- Historical definitions [1NF]
   The original definitions defined by the code, taking into account only the primary key.
 - Refined definitions
   A refinement of the normal forms that also takes the candidate keys into account.
 
 {examples will be implented later}
+
+Functional dependencies
+Are dependencies that are defined by the designer. They cant be infered by reading data from the database table, instead they should be read in the documentation of the database. Only if there is no documentation provided with the database, you can try to infer functional dependencies from the data.
+
+{examples will be implented later}
+
 
