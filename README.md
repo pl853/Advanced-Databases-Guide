@@ -94,8 +94,14 @@ The image below is an example of a table that is not 1NF, this is because the at
 ![No_1NF](https://user-images.githubusercontent.com/24454699/55897466-1408bf00-5bb0-11e9-811d-d90f80e118f0.png)
 
 The second normal form [2NF] </br>
+A table is in 2NF if every attribute that is not part of the key depends on the whole primary key.</br>
+For example the table in the image below is not in 2NF because PNAME and PLOCATION only depend on PNUMBER and not on SSN and PNUMBER (which togheter is the whole key)</br> 
 
-{examples will be implented later}
+![not_2NF](https://user-images.githubusercontent.com/24454699/55899624-d2c6de00-5bb4-11e9-9a04-b41c10409bd8.png)
+</br>
+
+AN USEFULL TRICK TO CHECK IF A TABLE IS IN 2NF:</br>
+If the primary key of a table is made of only one attribute the table is always 2NF. This is because there is no functional dependency where the left side is a part of the primary key.
 
 Functional dependencies </br>
 Are dependencies that are defined by the designer. They cant be infered by reading data from the database table, instead they should be read in the documentation of the database. Only if there is no documentation provided with the database, you can try to infer functional dependencies from the data.
