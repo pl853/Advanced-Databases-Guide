@@ -1,1 +1,42 @@
 # Advanced-Databases
+
+E-R Models
+Are the highest level of models when database modelling, it models the conceptual aspect of the database.
+ - entity 
+ - attributes
+ - relations
+    - 1-1
+    - 1-N
+    - N-M
+ - Keys
+ - Weak entities
+
+Relational model
+A model halfway between a conceptual model and the physical model, it contains an abstraction of physical elements
+ - relation
+ - Keys
+
+SQL
+SQL is a language than declares the WHAT and not the HOW.
+The language consist of four categories.
+
+The Data Definition Language (DDL) is used to create relations (tables).
+
+Data Manipulation Language (DML) is used to insert,modify and extract data from relations (tables).
+
+Data Control Language (DCL) is used to grant controle to tables,views and databases.
+
+Transaction Control language (TCL) is used to create transactions and control them.
+
+DML
+
+Normalization
+The main reason normalization is used is because it improves the way the database is designed. Normalization uses decomposition to eliminate anomalies and redundancy. This is neccesary since it wil:
+- minimze te storage space used by relations
+  When you join two separate tables you use less storage space then putting everything in the same table.
+- eliminate anomalies in a database (redundancy | overbodigheden)
+  When updating a database which has anomalies there will be null values needed. 
+  When deleting a database which has anomalies there will be more info removed than needed.
+  When modifying a database which has anomalies you have to modify every tuple by hand because it will not reflect the modification in al the tuples.
+- eliminate spurious tuples
+  spurious tuples are created when joining 2 tables that are not designed correctly. Normalization makes sure that the decomposition doesn't create spurious tuples
