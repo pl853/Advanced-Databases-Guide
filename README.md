@@ -76,7 +76,7 @@ The main reason normalization is used is because it improves the way the databas
 ![No_anomalies](https://user-images.githubusercontent.com/24454699/55897471-166b1900-5bb0-11e9-91db-366cebb43855.png)
 
 - eliminate spurious tuples
-  spurious tuples are created when joining 2 tables that are not designed correctly, this will create more tuples than were in the original tables. Normalization makes sure that the decomposition doesn't create spurious tuples. </br>
+  spurious tuples are created when joining 2 tables that are not designed correctly, this will create more tuples than were in the original tables. These redundant tuples are called spurious tuples. Normalization makes sure that the decomposition doesn't create spurious tuples. </br>
   In the following image you can see an example of a combined datatable where spurious tuples are created. Everything under the dotted lines are spurious tuples.
   ![Spurious_tuples](https://user-images.githubusercontent.com/24454699/55897454-0eab7480-5bb0-11e9-8168-784bc76ae708.png)
 
