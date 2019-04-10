@@ -165,7 +165,16 @@ Below we will learn some algorithms for normalizing tables. The algorithms are:
   - The reason for FD1 NOT breaking the 2NF is because HOURS depends on both of the key attributes (SSN PNUMBER)
 
   After you found an attribute which satisfys the characteristics mentionend above you remove the attribute from the table (EMP_PROJ).</br> 
-  Then you create 
+  Then you create a table called EP2 containing SSN (the primary key left) with the attribute that depends on it (ENAME). This table represents FD2 (see image below) </br>
+  ![ep1](https://user-images.githubusercontent.com/24454699/55913231-abcbd480-5bd3-11e9-962f-fe8a01097717.png)
+  </br>
+  After that your create a table called EP3 which represent FD3. This table contains PNUMBER and the attributes that depend on it. (PNAME and PLOCATION) (see image below) </br>
+  ![ep3](https://user-images.githubusercontent.com/24454699/55913384-10872f00-5bd4-11e9-8bd0-704b5eaa5e5d.png)
+  </br>
+
+  The final result is shown in the image below. </br>
+  ![ep1_ep2_ep3](https://user-images.githubusercontent.com/24454699/55913451-33194800-5bd4-11e9-9886-4b068a674f4b.png)
+  </br>
 
 
   
