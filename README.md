@@ -57,6 +57,7 @@ The main reason normalization is used is because it improves the way the databas
   When updating a database which has anomalies there will be null values needed. 
   When deleting a database which has anomalies there will be more info removed than needed.
   When modifying a database which has anomalies you have to modify every tuple by hand because it will not reflect the modification in al the tuples.
+  In the following image you can see an example where anomalies have been removed by splitting the table in 2 separate tables.
 
 ![No_anomalies](https://user-images.githubusercontent.com/24454699/55897471-166b1900-5bb0-11e9-91db-366cebb43855.png)
 
