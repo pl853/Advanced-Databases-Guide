@@ -20,8 +20,9 @@ Are the highest level of models when database modelling, it models the conceptua
    - Foreign keys are a set of attributes in one relation (table) which is a primary key in another relation (table) </br>
     Ex 1. An id for a starship. In this example starships can't have the same key. </br>
     Ex 2. A firstname and a lastname for a person combined. In this case a people can't have the same combination of firstname and lastname. </br>
-    In the image below there is an example of the 2 types of keys. In this case shipid is a foreign key to ships.
- </br>
+    In the image below there is an example of the 2 types of keys. In this case shipid is a foreign key to ships.</br>
+
+
 ![ex+keys](https://user-images.githubusercontent.com/24454699/55898683-a8742100-5bb2-11e9-812b-1979858118cc.png)
 </br>
 
