@@ -1,6 +1,6 @@
 # Advanced-Databases
 
-E-R Models
+E-R Models </br>
 Are the highest level of models when database modelling, it models the conceptual aspect of the database.
  - entity 
  - attributes
@@ -16,7 +16,7 @@ A model halfway between a conceptual model and the physical model, it contains a
  - relation
  - Keys
 
-SQL
+SQL </br>
 SQL is a language than declares the WHAT and not the HOW.
 The language consist of four categories.
 
@@ -30,7 +30,7 @@ Transaction Control language (TCL) is used to create transactions and control th
 
 {examples will be implented later}
 
-Normalization
+Normalization </br>
 The main reason normalization is used is because it improves the way the database is designed. It is the process of converting the tables of a database into other tables in some normal form( will be explained later). Normalization uses decomposition to eliminate anomalies and redundancy. This is neccesary since it wil:
 - minimze te storage space used by relations
   When you join two separate tables you use less storage space then putting everything in the same table.
@@ -41,20 +41,24 @@ The main reason normalization is used is because it improves the way the databas
 - eliminate spurious tuples
   spurious tuples are created when joining 2 tables that are not designed correctly. Normalization makes sure that the decomposition doesn't create spurious tuples
 
-Normal forms
+Normal forms </br>
 They are properties that a relation must satisfy. You can devide the term normal forms in 2 differen kinds:
-- Historical definitions [1NF]
+- Historical definitions </br>
   The original definitions defined by the code, taking into account only the primary key.
-- Refined definitions
+- Refined definitions </br>
   A refinement of the normal forms that also takes the candidate keys into account.
-The first normal form will be automaticly given by the relational model unless the ERD is not translated correctly in the relational model. All your relations should be 1NF.
+
+The first normal form [1NF] </br> will be automaticly given by the relational model unless the ERD is not translated correctly in the relational model. All your relations should be 1NF.
 You can see if a table is in 1NF by checking wether a row has multiple values for one attribute. If this is the case the table is not in 1NF. 
+
+The second normal form [2NF] </br>
 
 {examples will be implented later}
 
-Functional dependencies
+Functional dependencies </br>
 Are dependencies that are defined by the designer. They cant be infered by reading data from the database table, instead they should be read in the documentation of the database. Only if there is no documentation provided with the database, you can try to infer functional dependencies from the data.
 
 {examples will be implented later}
 
 
+Normalization on candidate keys </br>
