@@ -91,14 +91,14 @@ They are properties that a relation must satisfy. You can devide the term normal
   A refinement of the normal forms that also takes the candidate keys into account.
 
 The first normal form [1NF] </br> will be automaticly given by the relational model unless the ERD is not translated correctly in the relational model. All your relations should be 1NF.
-You can see if a table is in 1NF by checking wether a row has multiple values for one attribute. If this is the case the table is not in 1NF. </br>
+You can see if a table is in 1NF by checking wether a row has multiple values for one attribute. If this is the case the table is NOT in 1NF. </br>
 The image below is an example of a table that is not 1NF, this is because the attribute PNUMBER is not unique in the datatable.
 
 ![No_1NF](https://user-images.githubusercontent.com/24454699/55897466-1408bf00-5bb0-11e9-811d-d90f80e118f0.png)
 
 The second normal form [2NF] </br>
-A table is in 2NF if every attribute that is not part of the key depends on the whole primary key.</br>
-For example the table in the image below is not in 2NF because PNAME and PLOCATION only depend on PNUMBER and not on SSN and PNUMBER (which togheter is the whole key).</br> 
+A table is in 2NF if every attribute that is NOT part of the key depends on the whole primary key.</br>
+For example the table in the image below is NOT in 2NF because PNAME and PLOCATION only depend on PNUMBER and not on SSN and PNUMBER (which togheter is the whole key).</br> 
 
 ![not_2NF](https://user-images.githubusercontent.com/24454699/55899624-d2c6de00-5bb4-11e9-9a04-b41c10409bd8.png)
 </br>
