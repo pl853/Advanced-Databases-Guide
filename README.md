@@ -4,7 +4,7 @@ E-R Models
 Are the highest level of models when database modelling, it models the conceptual aspect of the database.
  - entity 
  - attributes
- - relations
+ - relations:
     - 1-1
     - 1-N
     - N-M
@@ -28,10 +28,10 @@ Data Control Language (DCL) is used to grant controle to tables,views and databa
 
 Transaction Control language (TCL) is used to create transactions and control them.
 
-DML
+{examples will be implented later}
 
 Normalization
-The main reason normalization is used is because it improves the way the database is designed. Normalization uses decomposition to eliminate anomalies and redundancy. This is neccesary since it wil:
+The main reason normalization is used is because it improves the way the database is designed. It is the process of converting the tables of a database into other tables in some normal form( will be explained later). Normalization uses decomposition to eliminate anomalies and redundancy. This is neccesary since it wil:
 - minimze te storage space used by relations
   When you join two separate tables you use less storage space then putting everything in the same table.
 - eliminate anomalies in a database (redundancy | overbodigheden)
@@ -40,3 +40,13 @@ The main reason normalization is used is because it improves the way the databas
   When modifying a database which has anomalies you have to modify every tuple by hand because it will not reflect the modification in al the tuples.
 - eliminate spurious tuples
   spurious tuples are created when joining 2 tables that are not designed correctly. Normalization makes sure that the decomposition doesn't create spurious tuples
+
+Normal forms
+They are properties that a relation must satisfy. You can devide the term normal forms in 2 differen kinds:
+- Historical definitions
+  The original definitions defined by the code, taking into account only the primary key.
+- Refined definitions
+  A refinement of the normal forms that also takes the candidate keys into account.
+
+{examples will be implented later}
+
