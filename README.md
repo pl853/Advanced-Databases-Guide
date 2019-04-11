@@ -231,7 +231,7 @@ Lets take practice a scenario where s1.energy = 50 and s2.shields =70, the trans
 - s2.shields = 1.05 * s2.shields. R(s2) is in this case 80 because thats the value in the database. W(s2) is in this case 1.05* 80 = 84.
 - Now the values are commited to the database again which leaves that database values at s1.energy =52.5 and s2.shields = 80.
 </br>
-The transaction schedule of possibility 2:</br>
+The transaction schedule of possibility 2:
 ![poss2](https://user-images.githubusercontent.com/24454699/55955353-ba0c0600-5c50-11e9-962d-d0206980e0fb.png)
 </br>
 
