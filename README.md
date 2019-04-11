@@ -223,13 +223,13 @@ The interleaved schedule of possibility 1:</br>
 
 In the interleaved schedule you can see the letters R which stands for read (reading the data of the value between the brackets which is in this case ship 1 FROM the database and W which stands for write (writing the data TO the value between the brackets which in this case is ship 1). If we take the first part of the transaction T1 (ship1.energy = ship1.energy - 10),  the R(s1) in the schedule means that it reads the value of ship1.energy from the database. W(s1) means that it writes to the value of ship1, in this case thats energy -10. </br>
 
-Lets take practice a scenario where s1.energy = 50 and s2.shields =70, the transactions that will occure are as follows:
+Lets take practice a scenario where s1.energy = 50 and s2.shields =70, the transactions in schedule 1 will occure are as follows:
 - s1.energy = s1.energy - 10.  R(s1) is in this case 50.  W(s1) is in this case 50 - 10 = 40. This part of the transaction is not commited to the database yet so the next time s1.energy is read (R(s1) it's still 50).
 - s1.energy = 1.05 * s1.energy. R(s1) is in this case still 50. W(s1) is in this case 1.05 * 50 = 52.5. so at this point s1.energy = 52.5. 
 - s2.shield - s2.shields + 10. R(s2) is in this case 70.  W(s2) is in this case 70 + 10 = 80.
-- Now the values are commited to the database. The values that will be commited are s1.energy = 52.5 and s2.shield = 80. So in the database s1.energy = 52.5 and s2.shield = 80.
+- Now the transaction T1 which has the values (52.5, 80) is commited to the database. The values that will be commited are s1.energy = 52.5 and s2.shield = 80. So in the database s1.energy = 52.5 and s2.shield = 80.
 - s2.shields = 1.05 * s2.shields. R(s2) is in this case 80 because thats the value in the database. W(s2) is in this case 1.05* 80 = 84.
-- Now the values are commited to the database again which leaves that database values at s1.energy =52.5 and s2.shields = 80.
+- Now the transaction T2 which has the values (52.5, 80) is commited to the database again which leaves that database values at s1.energy =52.5 and s2.shields = 80.
 
 The transaction schedule of possibility 2:</br>
 ![poss2](https://user-images.githubusercontent.com/24454699/55955353-ba0c0600-5c50-11e9-962d-d0206980e0fb.png)
@@ -239,6 +239,13 @@ The interleaved schedule of possibility 2:</br>
 ![interleaved2](https://user-images.githubusercontent.com/24454699/55955905-30f5ce80-5c52-11e9-86ec-8aa50911a3f7.png)
 </br>
 
+Lets take practice a scenario where s1.energy = 50 and s2.shields =70, the transactions in schedule 2 will occure are as follows:
+- s1.energy = s1.energy - 10.  R(s1) is in this case 50.  W(s1) is in this case 50 - 10 = 40. This part of the transaction is not commited to the database yet so the next time s1.energy is read (R(s1) it's still 50).
+- s1.energy = 1.05 * s1.energy. R(s1) is in this case still 50. W(s1) is in this case 1.05 * 50 = 52.5. so at this point s1.energy = 52.5. 
+- s2.shield - 1.05 * s2.shields. R(s2) is in this case 70.  W(s2) is in this case 1.05 * 80 = 73.5.
+- Now transaction T2 which has the values (52.5, 73.5) is commited to the database. The values that will be commited are s1.energy = 52.5 and s2.shield = 73.5 . So in the database s1.energy = 52.5 and s2.shield = 73.5.
+- s2.shields = s2.shields +10. R(s2) is in this case 73.5 because thats the value in the database. W(s2) is in this case 73.5 + 10  = 83.5.
+- Now transaction T1 which has the values (40, 83.5) is commited to the database again which leaves that database values at s1.energy =40 and s2.shields = 73.5.
 
 When working with transactions the following problems can occure:
 - 
