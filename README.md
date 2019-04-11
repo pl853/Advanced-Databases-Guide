@@ -184,3 +184,20 @@ Below we will learn some algorithms for normalizing tables. The algorithms are:
   
 - from 2NF to 3NF
 
+Transaction
+A transaction is a logical unit(querie) that is independentlu exectuted for data retrieval or updates. In the image below you can see multiple transaction queries. </br>
+
+ 
+ACID
+Is an abriviaton of Atomic Consistency Isolation Durability. It is a concept referring to a database system’s four transaction properties: atomicity, consistency, isolation and durability. Below you find an explanation of each of the four propperties:
+- Atomicity
+  A database follows the all or nothing rule, i.e., the database considers all transaction operations as one whole unit or atom. That means when a database processes a transaction, it is either fully completed or not executed at all. A transaction can either commit after completing or abort after executing an action. 
+- Consistency
+  Ensures that only valid data following all rules and constraints is written in the database. When a transaction results in invalid data, the database reverts to its previous state, which abides by all customary rules and constraints.
+- Isolation
+  Ensures that transactions are securely and independently processed at the same time without interference, but it does not ensure the order of transactions. For example, user A withdraws $100 and user B withdraws $250 from user Z’s account, which has a balance of $1000. Since both A and B draw from Z’s account, one of the users is required to wait until the other user transaction is completed, avoiding inconsistent data. If B is required to wait, then B must wait until A’s transaction is completed, and Z’s account balance changes to $900. Now, B can withdraw $250 from this $900 balance.
+
+
+Transaction management
+Concurrency Control 
+
