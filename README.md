@@ -283,9 +283,15 @@ Is getting rid of the consquences when a conflict occurs, there will never be a 
 </br>
 This transition schedule is conflict equilvalent to the serial execution when the read and write in T1 on B are performed before the read/write on A in T2.</br>
 
-Conflict serializability is not always possible. 
-Locking 
+Conflict serializability is not always possible. (See image below) </br>
+![noserial](https://user-images.githubusercontent.com/24454699/55970387-fa7a7c80-5c6e-11e9-97e1-c7f82c5bce6b.png)
+</br>
+Serializibility in this schedule is not possible because they cant transform into one another by swapping the nonconflicting operations.
+
+
 - Strict Two Phase-Locking (2PL)
+  In 2PL there are two types of locks. The first is an shared lock. A SHARED lock is requested when a transaction READS an object. The second is an exclusive lock. An EXCLUSIVE lock is requested when a transaction tries to WRITE and object. So shared lock when reading and exclusive lock when writing.
+  
 - Locking on tables
 - Phantom update
 - Transaction isolation
