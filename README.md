@@ -194,15 +194,20 @@ Let's take the image above. We should write down what happends in the image.
 - The integrety of the ship called Alpha is set to 30.
   The step mentioned above will cause problems since there is no ship in the database that has the name Alpha, YET. Because of this we roll back to the savepoint (my_savepoint).
 - The integrety of the ship called Beta is improved by 10.
-- Then we commit the changes to the database
+- Then we commit the changes to the database. (the changes will be saved in the database)
 
 We can also write down transaction in a simpler way. This is done in the image below.</br>
 
 ![simplefied_trnas](https://user-images.githubusercontent.com/24454699/55954150-7a8fea80-5c4d-11e9-9b6f-00d4f048feb5.png)
 </br>
 
+In transaction 1 (T1) , 10 energy will be subtracted from the ships energy (ship1.energy -10) and 10 shield will be added to the ships shield(ship1.shield + 10). After that the changes will be committed (saved in the database). </br>
 
-In transaction 1 (T1) , 10 energy will be subtracted from the ships energy (ship1.energy -10) and 10 shield will be added to the ships shield(ship1.shield + 10). After that the changes will be committed (saved in the database).
+For the transactions above there are two possibilities. (see images below) </br>
+![poss1](https://user-images.githubusercontent.com/24454699/55955319-9ba60a80-5c50-11e9-800a-8482979965ca.png)
+</br>
+![poss2](https://user-images.githubusercontent.com/24454699/55955353-ba0c0600-5c50-11e9-962d-d0206980e0fb.png)
+
 ACID
 Is an abriviaton of Atomic Consistency Isolation Durability. It is a concept referring to a database system’s four transaction properties: atomicity, consistency, isolation and durability. Below you find an explanation of each of the four propperties:
 - Atomicity
