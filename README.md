@@ -205,7 +205,7 @@ Let's take the image above. We should write down what happends in the image.
 - The integrety of the ship called Beta is improved by 10.
 - Then we commit the changes to the database. (the changes will be saved in the database)
 
-We can also write down transaction in a simpler way. This is done in the image below.</br>
+We can also write down transactions in a simpler way. This is done in the image below.</br>
 
 ![simplefied_trnas](https://user-images.githubusercontent.com/24454699/55954150-7a8fea80-5c4d-11e9-9b6f-00d4f048feb5.png)
 </br>
@@ -248,6 +248,11 @@ Lets take practice a scenario where s1.energy = 50 and s2.shields =70, the trans
 - Now transaction T1 which has the values (40, 83.5) is commited to the database again which leaves that database values at s1.energy = 40 and s2.shields = 73.5.
 
 The outcome of the two schedules are not equivalent. This means that a problem occured during the transactions.</br>
+This can be cause by a af types of problems:
+- The different schedules of transactions might ignore operations finalized by other transactions.
+  The reason for this are conflits with Read/Write operations.
+- A conflict thats caused by the isolation property of transactions.
+  The isolation property can cause an anomaly in the database.
 When working with transactions the following problems can occure:
 - 
 
