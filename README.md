@@ -196,7 +196,8 @@ Let's take the image above. We should write down what happends in the image.
 - The integrety of the ship called Beta is improved by 10.
 - Then we commit the changes to the database
 
-After the 
+We can also write down transaction in a simpler way. This is done in the image below.</br>
+
 ![simplefied_trnas](https://user-images.githubusercontent.com/24454699/55954150-7a8fea80-5c4d-11e9-9b6f-00d4f048feb5.png)
 </br>
 
