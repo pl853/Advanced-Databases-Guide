@@ -255,13 +255,19 @@ This can be cause by a af types of problems:
   The isolation property can cause an anomaly in the database.
 
 There are four possible combinations of Read/Write operations:
-- Read/Read
+- Read/Read </br>
   This combination is always safe because it doesn't alter the data.
-- Write / Read
-  This combinations can cause an issue because of something called Dirty read. In the image below you find an example of a transaction schedule where Dirty read occurs. </br> 
+- Write / Read </br>
+  This combination can cause an issue called Dirty read. In the image below you find an example of a transaction schedule where Dirty read occurs. </br> 
   ![dirtyread](https://user-images.githubusercontent.com/24454699/55960925-4de3cf00-5c5d-11e9-9876-2a529d220811.png)
   </br>
-
+  As you can see T1 reads and writes the energy but does not commit it to the database. Meanwhile T2 also reads the energy and the shields and then writes them.</bn>
+  The problem here is that the value of the energy of T1 is overwritten by the value of energy from T2.
+- Read/Write </br>
+  This combiation can cause an issue called unrepeatable reads. In the image below you find an example of a transaction schedule where Unrepeatable read occurs </br>
+  ![unrepeat](https://user-images.githubusercontent.com/24454699/55961747-0fe7aa80-5c5f-11e9-9bea-67d2e9c538e7.png)
+  </br>
+  As you can see
 Transaction management
 Concurrency Control 
 
