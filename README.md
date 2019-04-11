@@ -275,7 +275,15 @@ There are four possible combinations of Read/Write operations:
   </br>
   As you can see in the image T2 commits first and then overwrites the changes to the shield made by T1.</br>
   The problem here is that the update made by one of the transactions is lost.
-  
-Transaction management
-Concurrency Control 
+
+Serializability
+
+Locking 
+- Strict Two Phase-Locking (2PL)
+- Locking on tables
+- Phantom update
+- Transaction isolation
+- Deadlocks
+- Deadlock prevention
+
 
