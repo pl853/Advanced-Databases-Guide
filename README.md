@@ -201,12 +201,22 @@ We can also write down transaction in a simpler way. This is done in the image b
 ![simplefied_trnas](https://user-images.githubusercontent.com/24454699/55954150-7a8fea80-5c4d-11e9-9b6f-00d4f048feb5.png)
 </br>
 
-In transaction 1 (T1) , 10 energy will be subtracted from the ships energy (ship1.energy -10) and 10 shield will be added to the ships shield(ship1.shield + 10). After that the changes will be committed (saved in the database). </br>
+In transaction 1 (T1) , 10 energy will be subtracted from the ships energy (ship1.energy -10) and 10 shield will be added to the ships shield(ship1.shield + 10). After each transaction the changes will be committed (saved in the database). </br>
 
-For the transactions above there are two possibilities. (see images below) </br>
+For the transactions above you can create a transaction schedule which displays the order of the transactions in a better way. You can also create a DBMS (Atomic Consistency Isolation Durability) interleaved schedule, which displays what happends in an even more detailed way. (see images below) </br>
+</br>
+The transaction schedule of possibility 1: </br>
 ![poss1](https://user-images.githubusercontent.com/24454699/55955319-9ba60a80-5c50-11e9-800a-8482979965ca.png)
 </br>
+The interleaved schedule of possibility 1:</br>
+![interleaved1](https://user-images.githubusercontent.com/24454699/55955905-30f5ce80-5c52-11e9-86ec-8aa50911a3f7.png)
+</br>
+
+In the interleaved schedule you can see the letters R which stands for read (reading the data FROM the value between the brackets which is in this case ship 1) and W which stands for write (writing the data TO the value between the brackets which in this case is ship 1). If we take the first part of the transaction T1 (ship1.energy = ship1.energy - 10),  the R(s1) in the schedule means that it reads the value of ship1.energy. W(s1) means that it writes to the value of ship1, in this case thats energy -10. 
 ![poss2](https://user-images.githubusercontent.com/24454699/55955353-ba0c0600-5c50-11e9-962d-d0206980e0fb.png)
+</br>
+
+These transactions can be transformed in a DBMS (Atomic Consistency Isolation Durability) interleaved schedule. (The schedules)
 
 ACID
 Is an abriviaton of Atomic Consistency Isolation Durability. It is a concept referring to a database system’s four transaction properties: atomicity, consistency, isolation and durability. Below you find an explanation of each of the four propperties:
