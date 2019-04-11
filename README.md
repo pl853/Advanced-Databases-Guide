@@ -290,11 +290,16 @@ Serializibility in this schedule is not possible because they cant transform int
 
 
 - Strict Two Phase-Locking (2PL)
-  In 2PL there are two types of locks. The first is an shared lock. A SHARED lock is requested when a transaction READS an object. The second is an exclusive lock. An EXCLUSIVE lock is requested when a transaction tries to WRITE and object. So shared lock when reading and exclusive lock when writing. A transaction can only release locks when it either aborts or commits, in this way a rollback can be executed before another transaction can use the data. </br>
+  In 2PL there are two types of locks. The first is an shared lock. A SHARED lock is requested when a transaction READS an object in a schedule it looks like S(A), this means a shared lock on object A . The second is an exclusive lock. An EXCLUSIVE lock is requested when a transaction tries to WRITE and object in a schedule it looks like X(A), this means an exclusive lock on object A. So shared lock when reading and exclusive lock when writing. A transaction can only release locks when it either aborts or commits, in this way a rollback can be executed before another transaction can use the data. </br>
   In 2PL there are some rules. In the image below you find the rules.</br>
 
   ![lockrules](https://user-images.githubusercontent.com/24454699/55970878-f0a54900-5c6f-11e9-9f1c-cf32e396305c.png)
   </br>
+
+  In the image blow you can find an example of locking in tables.</br>
+  ![lockex](https://user-images.githubusercontent.com/24454699/55970975-1f232400-5c70-11e9-833e-a2b67fbe72f5.png)
+  </br>
+  
   
 - Locking on tables
 - Phantom update
