@@ -229,7 +229,7 @@ Lets take practice a scenario where s1.energy = 50 and s2.shields =70, the trans
 - s2.shield - s2.shields + 10. R(s2) is in this case 70.  W(s2) is in this case 70 + 10 = 80.
 - Now the transaction T1 which has the values (52.5, 80) is commited to the database. The values that will be commited are s1.energy = 52.5 and s2.shield = 80. So in the database s1.energy = 52.5 and s2.shield = 80.
 - s2.shields = 1.05 * s2.shields. R(s2) is in this case 80 because thats the value in the database. W(s2) is in this case 1.05* 80 = 84.
-- Now the transaction T2 which has the values (52.5, 80) is commited to the database again which leaves that database values at s1.energy =52.5 and s2.shields = 80.
+- Now the transaction T2 which has the values (52.5, 80) is commited to the database again which leaves that database values at s1.energy = 52.5 and s2.shields = 80.
 
 The transaction schedule of possibility 2:</br>
 ![poss2](https://user-images.githubusercontent.com/24454699/55955353-ba0c0600-5c50-11e9-962d-d0206980e0fb.png)
@@ -245,8 +245,9 @@ Lets take practice a scenario where s1.energy = 50 and s2.shields =70, the trans
 - s2.shield - 1.05 * s2.shields. R(s2) is in this case 70.  W(s2) is in this case 1.05 * 80 = 73.5.
 - Now transaction T2 which has the values (52.5, 73.5) is commited to the database. The values that will be commited are s1.energy = 52.5 and s2.shield = 73.5 . So in the database s1.energy = 52.5 and s2.shield = 73.5.
 - s2.shields = s2.shields +10. R(s2) is in this case 73.5 because thats the value in the database. W(s2) is in this case 73.5 + 10  = 83.5.
-- Now transaction T1 which has the values (40, 83.5) is commited to the database again which leaves that database values at s1.energy =40 and s2.shields = 73.5.
+- Now transaction T1 which has the values (40, 83.5) is commited to the database again which leaves that database values at s1.energy = 40 and s2.shields = 73.5.
 
+The outcome of the two schedules are not equivalent. This means that a problem occured during the transactions.</br>
 When working with transactions the following problems can occure:
 - 
 
