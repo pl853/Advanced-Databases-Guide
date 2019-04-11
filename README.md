@@ -188,10 +188,20 @@ Transaction
 A transaction is a logical unit(querie) that is independentlu exectuted for data retrieval or updates. In the image below you can see multiple transaction queries. </br>
 ![transaction](https://user-images.githubusercontent.com/24454699/55954072-44526b00-5c4d-11e9-9af9-52e9da1709f2.png) 
 </br>
-We can simplefy this transactions in the following way. (see image below)</br>
+Let's take the image above. We should write down what happends in the image.
+- The name of the ship called Oleg will be changed to Alpha.
+- A savepoint called my_savepoint is created to which the database can roll back to.</br>
+- The integrety of the ship called Alpha is set to 30.
+  The step mentioned above will cause problems since there is no ship in the database that has the name Alpha, YET. Because of this we roll back to the savepoint (my_savepoint).
+- The integrety of the ship called Beta is improved by 10.
+- Then we commit the changes to the database
+
+After the 
 ![simplefied_trnas](https://user-images.githubusercontent.com/24454699/55954150-7a8fea80-5c4d-11e9-9b6f-00d4f048feb5.png)
 </br>
- 
+
+
+In transaction 1 (T1) , 10 energy will be subtracted from the ships energy (ship1.energy -10) and 10 shield will be added to the ships shield(ship1.shield + 10). After that the changes will be committed (saved in the database).
 ACID
 Is an abriviaton of Atomic Consistency Isolation Durability. It is a concept referring to a database system’s four transaction properties: atomicity, consistency, isolation and durability. Below you find an explanation of each of the four propperties:
 - Atomicity
