@@ -212,7 +212,7 @@ The interleaved schedule of possibility 1:</br>
 ![interleaved1](https://user-images.githubusercontent.com/24454699/55955905-30f5ce80-5c52-11e9-86ec-8aa50911a3f7.png)
 </br>
 
-In the interleaved schedule you can see the letters R which stands for read (reading the data FROM the value between the brackets which is in this case ship 1) and W which stands for write (writing the data TO the value between the brackets which in this case is ship 1). If we take the first part of the transaction T1 (ship1.energy = ship1.energy - 10),  the R(s1) in the schedule means that it reads the value of ship1.energy. W(s1) means that it writes to the value of ship1, in this case thats energy -10. 
+In the interleaved schedule you can see the letters R which stands for read (reading the data FROM the value between the brackets which is in this case ship 1) and W which stands for write (writing the data TO the value between the brackets which in this case is ship 1). If we take the first part of the transaction T1 (ship1.energy = ship1.energy - 10),  the R(s1) in the schedule means that it reads the value of ship1.energy. W(s1) means that it writes to the value of ship1, in this case thats energy -10. </br>
 ![poss2](https://user-images.githubusercontent.com/24454699/55955353-ba0c0600-5c50-11e9-962d-d0206980e0fb.png)
 </br>
 
