@@ -13,7 +13,7 @@ namespace Advanced_Databases {
         static ClassAndSchedule[] ClassAndScheduleTable = Variables.GetClassAndScheduleTable;
 
         static void Main (string[] args) {
-            System.Console.WriteLine ("REMEMBER THE PORPUSE OF EACH FUNCTION: \n Map (manipulate data) λ(A) => (B)");
+            System.Console.WriteLine ("REMEMBER THE PURPOSE OF EACH FUNCTION: \n Map (manipulate data) λ(A) => (B)");
             System.Console.WriteLine(" Reduce (Operation, reduce the data to a smaller data set) λ(B,A) => B \n Join (Condition) λ(A,B) => Bool \n ");
 
             var map_students_names = StudentTable.Map (studenTable => new { studenTable.FirstName });
@@ -75,7 +75,7 @@ namespace Advanced_Databases {
 
             // Query 4:
             // Print het aantal vakken na het 4e uur
-            
+
             // Query 5:
             // print de voornaam, achternaam en klas van een student
 
