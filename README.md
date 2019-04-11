@@ -277,7 +277,10 @@ There are four possible combinations of Read/Write operations:
   The problem here is that the update made by one of the transactions is lost.
 
 Serializability
+Is getting rid of the consquences when a conflict occurs, there will never be a conflict in serial executions. In the image below there is a conlict happening. Do you know what conflict this is? </br>
 
+![DIRTYREAD](https://user-images.githubusercontent.com/24454699/55968244-2ac01c00-5c6b-11e9-99cf-914e03352bda.png)
+</br>
 Locking 
 - Strict Two Phase-Locking (2PL)
 - Locking on tables
