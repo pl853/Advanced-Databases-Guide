@@ -277,10 +277,14 @@ There are four possible combinations of Read/Write operations:
   The problem here is that the update made by one of the transactions is lost.
 
 Serializability
-Is getting rid of the consquences when a conflict occurs, there will never be a conflict in serial executions. In the image below there is a conlict happening. Do you know what conflict this is? </br>
+Is getting rid of the consquences when a conflict occurs, there will never be a conflict in serial executions. Two schedules are conflict equivalent if you can transform to one another by swapping operations DO NOT conflict. In the image below there is a conlict happening. Do you know what conflict this is? </br>
 
 ![DIRTYREAD](https://user-images.githubusercontent.com/24454699/55968244-2ac01c00-5c6b-11e9-99cf-914e03352bda.png)
 </br>
+If your answer was Dirty read you answered correctly! The reason for the conflict being dirty read is because in T1 a is read en writen and before commiting T1, T2 also reads and writes A. </br>
+To make this transition schedule conflict equilvalent to the serial execution The read and write in T1 on B should be performed before the read/write on A in T2.</br>
+
+Conflict serializability is not always possible. 
 Locking 
 - Strict Two Phase-Locking (2PL)
 - Locking on tables
