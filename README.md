@@ -251,10 +251,16 @@ The outcome of the two schedules are not equivalent. This means that a problem o
 This can be cause by a af types of problems:
 - The different schedules of transactions might ignore operations finalized by other transactions.
   The reason for this are conflits with Read/Write operations.
-- A conflict thats caused by the isolation property of transactions.
+- A conflict that's caused by the isolation property of transactions.
   The isolation property can cause an anomaly in the database.
-When working with transactions the following problems can occure:
-- 
+
+There are fout possible combinations of Read/Write operations:
+- Read/Read
+  This combination is always safe because it doesn't alter the data.
+- Write / Read
+  This combinations can cause an issue because of something called Dirty read. In the image below you find an example of a transaction schedule where Dirty read occurs/ </br> 
+  ![dirtyread](https://user-images.githubusercontent.com/24454699/55960925-4de3cf00-5c5d-11e9-9876-2a529d220811.png)
+  </br>
 
 Transaction management
 Concurrency Control 
