@@ -1,6 +1,4 @@
 /home/sysuser/Documents/Projects/Advanced-Databases/bin/Debug/netcoreapp2.2/Advanced-Databases.deps.json
-/home/sysuser/Documents/Projects/Advanced-Databases/bin/Debug/netcoreapp2.2/Advanced-Databases.runtimeconfig.json
-/home/sysuser/Documents/Projects/Advanced-Databases/bin/Debug/netcoreapp2.2/Advanced-Databases.runtimeconfig.dev.json
 /home/sysuser/Documents/Projects/Advanced-Databases/bin/Debug/netcoreapp2.2/Advanced-Databases.dll
 /home/sysuser/Documents/Projects/Advanced-Databases/bin/Debug/netcoreapp2.2/Advanced-Databases.pdb
 /home/sysuser/Documents/Projects/Advanced-Databases/obj/Debug/netcoreapp2.2/Advanced-Databases.csprojAssemblyReference.cache
@@ -9,3 +7,5 @@
 /home/sysuser/Documents/Projects/Advanced-Databases/obj/Debug/netcoreapp2.2/Advanced-Databases.AssemblyInfo.cs
 /home/sysuser/Documents/Projects/Advanced-Databases/obj/Debug/netcoreapp2.2/Advanced-Databases.dll
 /home/sysuser/Documents/Projects/Advanced-Databases/obj/Debug/netcoreapp2.2/Advanced-Databases.pdb
+/home/sysuser/Documents/Projects/Advanced-Databases/bin/Debug/netcoreapp2.2/Advanced-Databases.runtimeconfig.json
+/home/sysuser/Documents/Projects/Advanced-Databases/bin/Debug/netcoreapp2.2/Advanced-Databases.runtimeconfig.dev.json

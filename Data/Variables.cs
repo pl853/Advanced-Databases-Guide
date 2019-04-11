@@ -7,7 +7,7 @@ namespace Advanced_Databases.Data
 {
     class Variables
     {
-        public  Student[] GetStudentTable =
+        public static Student[] GetStudentTable =
         {
             new Student(0, "a", "b"),
             new Student(1, "c", "d"),
@@ -19,7 +19,7 @@ namespace Advanced_Databases.Data
             new Student(7, "o", "p")
         };
 
-        public Classes[] GetClassesTable =
+        public static Classes[] GetClassesTable =
         {
             new Classes("INF1A", "ROMA"),
             new Classes("INF1B", "TONIR"),
@@ -30,7 +30,7 @@ namespace Advanced_Databases.Data
             new Classes("INF2F", "AMMMQ")
         };
 
-        public StudentAndClasses[] GetStudentAndClassesTable =
+        public static StudentAndClasses[] GetStudentAndClassesTable =
         {
             new StudentAndClasses(0, "INF1A"),
             new StudentAndClasses(1, "INF1A"),
@@ -42,7 +42,7 @@ namespace Advanced_Databases.Data
             new StudentAndClasses(7, "INF1E")
         };
 
-        public Schedule[] GetScheduleTable =
+        public static Schedule[] GetScheduleTable =
         {
             new Schedule(0, "Intro 1", 2),
             new Schedule(1, "Dev3", 4),
@@ -54,7 +54,7 @@ namespace Advanced_Databases.Data
             new Schedule(7, "DIN", 8)
         };
 
-        public ClassAndSchedule[] GetClassAndScheduleTable =
+        public static ClassAndSchedule[] GetClassAndScheduleTable =
         {
             new ClassAndSchedule("INF1A",0),
             new ClassAndSchedule("INF1B",0),
