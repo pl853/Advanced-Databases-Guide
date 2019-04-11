@@ -184,7 +184,16 @@ Below we will learn some algorithms for normalizing tables. The algorithms are:
   
 - from 2NF to 3NF
 
-Transaction
+ACID
+Is an abriviaton of Atomic Consistency Isolation Durability. It is a concept referring to a database system’s four transaction properties: atomicity, consistency, isolation and durability. Below you find an explanation of each of the four propperties:
+- Atomicity
+  A database follows the all or nothing rule, i.e., the database considers all transaction operations as one whole unit or atom. That means when a database processes a transaction, it is either fully completed or not executed at all. A transaction can either commit after completing or abort after executing an action. 
+- Consistency
+  Ensures that only valid data following all rules and constraints is written in the database. When a transaction results in invalid data, the database reverts to its previous state, which abides by all customary rules and constraints.
+- Isolation
+  Ensures that transactions are securely and independently processed at the same time without interference, but it does not ensure the order of transactions. For example, user A withdraws $100 and user B withdraws $250 from user Z’s account, which has a balance of $1000. Since both A and B draw from Z’s account, one of the users is required to wait until the other user transaction is completed, avoiding inconsistent data. If B is required to wait, then B must wait until A’s transaction is completed, and Z’s account balance changes to $900. Now, B can withdraw $250 from this $900 balance.
+
+Transaction </br>
 A transaction is a logical unit(querie) that is independentlu exectuted for data retrieval or updates. In the image below you can see multiple transaction queries. </br>
 ![transaction](https://user-images.githubusercontent.com/24454699/55954072-44526b00-5c4d-11e9-9af9-52e9da1709f2.png) 
 </br>
@@ -212,7 +221,15 @@ The interleaved schedule of possibility 1:</br>
 ![interleaved1](https://user-images.githubusercontent.com/24454699/55955905-30f5ce80-5c52-11e9-86ec-8aa50911a3f7.png)
 </br>
 
-In the interleaved schedule you can see the letters R which stands for read (reading the data FROM the value between the brackets which is in this case ship 1) and W which stands for write (writing the data TO the value between the brackets which in this case is ship 1). If we take the first part of the transaction T1 (ship1.energy = ship1.energy - 10),  the R(s1) in the schedule means that it reads the value of ship1.energy. W(s1) means that it writes to the value of ship1, in this case thats energy -10. </br>
+In the interleaved schedule you can see the letters R which stands for read (reading the data of the value between the brackets which is in this case ship 1 FROM the database and W which stands for write (writing the data TO the value between the brackets which in this case is ship 1). If we take the first part of the transaction T1 (ship1.energy = ship1.energy - 10),  the R(s1) in the schedule means that it reads the value of ship1.energy from the database. W(s1) means that it writes to the value of ship1, in this case thats energy -10. </br>
+
+Lets take practice a scenario where s1.energy = 50 and s2.shields =70, the transactions that will occure are as follows:
+- s1.energy = s1.energy - 10.  R(s1) is in this case 50.  W(s1) is in this case 50 - 10 = 40. This part of the transaction is not commited to the database yet so the next time s1.energy is read (R(s1) it's still 50).
+- s1.energy = 1.05 * s1.energy. R(s1) is in this case still 50. W(s1) is in this case 1.05 * 50 = 52.5. so at this point s1.energy = 52.5. 
+- s2.shield - s2.shields + 10. R(s2) is in this case 70.  W(s2) is in this case 70 + 10 = 80.
+- Now the values are commited to the database. The values that will be commited are s1.energy = 52.5 and s2.shield = 80. So in the database s1.energy = 52.5 and s2.shield = 80.
+- s2.shields = 1.05 * s2.shields. R(s2) is in this case 80 because thats the value in the database. W(s2) is in this case 1.05* 80 = 84.
+- Now the values are commited to the database again which leaves that database values at s1.energy =52.5 and s2.shields = 80.
 </br>
 The transaction schedule of possibility 2:</br>
 ![poss2](https://user-images.githubusercontent.com/24454699/55955353-ba0c0600-5c50-11e9-962d-d0206980e0fb.png)
@@ -222,17 +239,9 @@ The interleaved schedule of possibility 2:</br>
 ![interleaved2](https://user-images.githubusercontent.com/24454699/55955905-30f5ce80-5c52-11e9-86ec-8aa50911a3f7.png)
 </br>
 
-These transactions can be transformed in a DBMS (Atomic Consistency Isolation Durability) interleaved schedule. (The schedules)
 
-ACID
-Is an abriviaton of Atomic Consistency Isolation Durability. It is a concept referring to a database system’s four transaction properties: atomicity, consistency, isolation and durability. Below you find an explanation of each of the four propperties:
-- Atomicity
-  A database follows the all or nothing rule, i.e., the database considers all transaction operations as one whole unit or atom. That means when a database processes a transaction, it is either fully completed or not executed at all. A transaction can either commit after completing or abort after executing an action. 
-- Consistency
-  Ensures that only valid data following all rules and constraints is written in the database. When a transaction results in invalid data, the database reverts to its previous state, which abides by all customary rules and constraints.
-- Isolation
-  Ensures that transactions are securely and independently processed at the same time without interference, but it does not ensure the order of transactions. For example, user A withdraws $100 and user B withdraws $250 from user Z’s account, which has a balance of $1000. Since both A and B draw from Z’s account, one of the users is required to wait until the other user transaction is completed, avoiding inconsistent data. If B is required to wait, then B must wait until A’s transaction is completed, and Z’s account balance changes to $900. Now, B can withdraw $250 from this $900 balance.
-
+When working with transactions the following problems can occure:
+- 
 
 Transaction management
 Concurrency Control 
