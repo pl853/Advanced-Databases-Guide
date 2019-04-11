@@ -261,13 +261,21 @@ There are four possible combinations of Read/Write operations:
   This combination can cause an issue called Dirty read. In the image below you find an example of a transaction schedule where Dirty read occurs. </br> 
   ![dirtyread](https://user-images.githubusercontent.com/24454699/55960925-4de3cf00-5c5d-11e9-9876-2a529d220811.png)
   </br>
-  As you can see T1 reads and writes the energy but does not commit it to the database. Meanwhile T2 also reads the energy and the shields and then writes them.</bn>
+  As you can see T1 reads and writes the energy but does not commit it to the database. Meanwhile T2 also reads the energy and the shields and then writes them.</br>
   The problem here is that the value of the energy of T1 is overwritten by the value of energy from T2.
 - Read/Write </br>
   This combiation can cause an issue called unrepeatable reads. In the image below you find an example of a transaction schedule where Unrepeatable read occurs </br>
   ![unrepeat](https://user-images.githubusercontent.com/24454699/55961747-0fe7aa80-5c5f-11e9-9bea-67d2e9c538e7.png)
   </br>
-  As you can see
+  As you can see T1 first reads s1.energy and then does something with A (Ex. A + 10). Then T2 reads s1.energy aswell, does something with it and commits it. Now in T1 energy is read again but now its getting a different value. </br>
+  The problem here is that T1 reads the same value twice but the results are different.
+- Write/Write</br>
+  This combination can cause an issue called lost update. In the image below you find an example of a transaction schedule where lost update occurs</br>
+  ![lostupdate](https://user-images.githubusercontent.com/24454699/55962336-2cd0ad80-5c60-11e9-8c8c-95b5bb557d80.png)
+  </br>
+  As you can see in the image T2 commits first and then overwrites the changes to the shield made by T1.</br>
+  The problem here is that the update made by one of the transactions is lost.
+  
 Transaction management
 Concurrency Control 
 
