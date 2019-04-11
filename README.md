@@ -307,14 +307,17 @@ Serializibility in this schedule is not possible because they cant transform int
 - Deadlocks
 - Deadlock prevention
 
-NoSQL</br>
-In RDBMS (Relational database management system) ACID is used to provide consistency and availabilty of the data. But what is used in the case of NoSQL databases? For this CAP is used. CAP exsists of the following guaranteest:
+ CAP exsists of the following guaranteest:
 - Consistency
 - Availability 
 - Partion
 
+NoSQL</br>
+In RDBMS (Relational database management system) ACID is used to provide consistency and availabilty of the data. But what is used in the case of NoSQL databases? For this BASE is used.
+
 Document databases
 MongoDB
 MapReduce
+Is a data processing paradigm for condensing large volumes of data in usefull results. The Map and Reduce functions are commonly used in function programming.
 
 
