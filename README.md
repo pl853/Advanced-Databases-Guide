@@ -186,7 +186,11 @@ Below we will learn some algorithms for normalizing tables. The algorithms are:
 
 Transaction
 A transaction is a logical unit(querie) that is independentlu exectuted for data retrieval or updates. In the image below you can see multiple transaction queries. </br>
-
+![transaction](https://user-images.githubusercontent.com/24454699/55954072-44526b00-5c4d-11e9-9af9-52e9da1709f2.png) 
+</br>
+We can simplefy this transactions in the following way. (see image below)</br>
+![simplefied_trnas](https://user-images.githubusercontent.com/24454699/55954150-7a8fea80-5c4d-11e9-9b6f-00d4f048feb5.png)
+</br>
  
 ACID
 Is an abriviaton of Atomic Consistency Isolation Durability. It is a concept referring to a database system’s four transaction properties: atomicity, consistency, isolation and durability. Below you find an explanation of each of the four propperties:
